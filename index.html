@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Firebase Authentication</title>
+
+  <!-- Firebase JS SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="loginForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <button type="button" onclick="login()">Login</button>
+  </form>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCG99nl_hH_8GvqEpxGmT-Zc6xyVKHJKiI", 
+      authDomain: "test-app-9eac0.firebaseapp.com",
+      projectId: "test-app-9eac0",
+      storageBucket: "test-app-9eac0.appspot.com",
+      messagingSenderId: "475645900729",
+      appId: "1:475645900729:web:b6b025376cf9f1f9c1a868"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    function login() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // ログイン成功
+          var user = userCredential.user;
+          if (user.emailVerified) {
+            window.location.href = '/home.html';
+          } else {
+            alert('Email is not verified. Please verify your email.');
+          }
+        })
+        .catch((error) => {
+          // ログイン失敗
+          console.error(error.message);
+          alert('Invalid email or password. Please try again.');
+        });
+    }
+  </script>
+  <a href="new_user.html">新規登録はこちら</a>
+</body>
+</html>
