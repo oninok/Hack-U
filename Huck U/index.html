@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="index.css">
+  <title>HUCK U OFFICIAL</title>
+
+   <!-- Firebase SDK -->
+  <script defer src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>
+
+
+</head>
+<body>
+    <section>
+        <div class="form-box">
+          <div class="form-value">
+            <form action="">
+              <h2>login</h2>
+              <div class="inputbox">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <input type="email" required>
+                  <label for="">Email</label>
+              </div>
+              <div class="inputbox">
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+                  <input type="Password" required>
+                  <label for="">Password</label>
+             </div>
+             
+             <button>Log in</button>
+             <div class="register">
+                 <p>Don't have a account <a href="#">Register</a></p>
+
+                <script>
+                  // registerLinkの要素を取得
+                  var registerLink = document.getElementById("registerLink");
+              
+                  // リンクがクリックされたときの処理
+                  registerLink.addEventListener("click", function() {
+                      // signin.htmlに遷移
+                      window.location.href = "file:///C:/Users/shinnakagawa-desktop/Downloads/firebase_tutorial-master/firebase_tutorial-master/public/signin.html";
+                  });
+                </script>
+             </div>
+
+            </form>
+          </div>
+        </div>
+
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
