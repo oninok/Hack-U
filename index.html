@@ -1,4 +1,4 @@
-
+<!-- ログインページ (login.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +24,7 @@
 
   <script>
     var firebaseConfig = {
-      apiKey: "AIzaSyCG99nl_hH_8GvqEpxGmT-Zc6xyVKHJKiI", 
+      apiKey: "AIzaSyCG99Anl_hH_8GvqEpxGmT-Zc6xyVKHJKiI", 
       authDomain: "test-app-9eac0.firebaseapp.com",
       projectId: "test-app-9eac0",
       storageBucket: "test-app-9eac0.appspot.com",
@@ -40,7 +40,6 @@
 
       firebase.auth().signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
-          // ログイン成功
           var user = userCredential.user;
           if (user.emailVerified) {
             window.location.href = '/home.html';
@@ -49,7 +48,6 @@
           }
         })
         .catch((error) => {
-          // ログイン失敗
           console.error(error.message);
           alert('Invalid email or password. Please try again.');
         });

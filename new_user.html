@@ -16,7 +16,7 @@
 
   <script>
     var firebaseConfig = {
-      apiKey: "AIzaSyCG99nl_hH_8GvqEpxGmT-Zc6xyVKHJKiI", 
+      apiKey: "AIzaSyCG99Anl_hH_8GvqEpxGmT-Zc6xyVKHJKiI", 
       authDomain: "test-app-9eac0.firebaseapp.com",
       projectId: "test-app-9eac0",
       storageBucket: "test-app-9eac0.appspot.com",
@@ -43,9 +43,12 @@
 
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
-        var redirectUrl = user.emailVerified ? '/home.html' : '/login.html';
-        window.location.href = redirectUrl;
-      } else {
+        if (!user.emailVerified) {
+          window.location.href = '/login.html';
+        } else if (!window.location.pathname.endsWith('home.html')) {
+          window.location.href = '/home.html';
+        }
+      } else if (!window.location.pathname.endsWith('new_user.html')) {
         window.location.href = '/new_user.html';
       }
     });
