@@ -32,7 +32,7 @@ EasyChat.prototype.signIn = function() {
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
 EasyChat.prototype.onAuthStateChanged = function(user) {
   if (user) {
-    // ログイン成功時にチャット画面に遷移
+    // ログイン成功時にルーム選択画面に遷移
     window.location.href = './';
   }
 };

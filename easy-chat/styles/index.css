@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+html, body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+.mdl-layout__header-row span {
+    margin-left: 15px;
+    margin-top: 17px;
+}
+
+.mdl-grid {
+    max-width: 1024px;
+}
+
+.material-icons {
+    font-size: 36px;
+    top: 8px;
+    position: relative;
+}
+
+.mdl-layout__header-row {
+    padding: 0;
+    margin: 0 auto;
+}
+
+#user-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 22px;
+    width: 100%;
+    right: 0;
+    padding-left: 10px;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+#user-container #user-pic {
+    top: -3px;
+    position: relative;
+    display: inline-block;
+    background-image: url('/images/profile_placeholder.png');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+    border-radius: 20px;
+}
+
+#user-container #user-name {
+    font-size: 16px;
+    line-height: 36px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+.room-title {
+    border: #ffffff00;
+    border-width: thick;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    padding: 0.6em;
+    height: 30px;
+    line-height: 1.5em;
+    color: #ffffff;
+    background: #f4a460;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.room-title p {
+    font-size: 25px;
+    overflow-wrap: break-word;
+}
+
+.room-text {
+    background: #ffffff;
+    border:solid 3px #f4a460;
+    border-width: thick;
+    border-radius: 0 5px 5px;
+    padding: 20px;
+    font-size: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    width: 90vw;
+    max-width: 1300px;
+    box-shadow: 5px 5px 8px #dddddd;
+    text-align: right;
+}
+
+.room-text p {
+    font-size: 18px;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+.room-text button {
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ffcc00;
+}
+
+/*.create {
+    text-align: left;
+}*/
+
+.create-button {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    background-color: azure;
+}
+
+@media (max-width: 700px) {
+    .room-title {
+        border: #ffffff00;
+        border-width: thick;
+        margin-left: 10px;
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        padding: 0.5em;
+        height: 20px;
+        line-height: 0.5em;
+        color: #ffffff;
+        background: #f4a460;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .room-title p {
+        font-size: 20px;
+        overflow-wrap: break-word;
+    }
+    
+    .room-text {
+        background: #ffffff;
+        border:solid 3px #f4a460;
+        border-width: thick;
+        border-radius: 0 5px 5px;
+        padding: 10px;
+        font-size: 100%;
+        margin-left: 10px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+        width: 90vw;
+        max-width: 800px;
+        box-shadow: 2px 2px 4px #dddddd;
+    }
+
+    .room-text p {
+        font-size: 16px;
+        overflow-wrap: break-word;
+    }
+    
+    .room-text button {
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    #user-container {
+        top: 72px;
+        background-color: rgb(3,155,229);
+        height: 38px;
+        padding-top: 3px;
+        padding-right: 2px;
+        display: none;
+    }
+    #user-container #user-pic {
+        top: 2px;
+        width: 33px;
+        height: 33px;
+        background-size: 33px;
+    }
+}
