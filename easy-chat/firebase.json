@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "target":"app",
+    "target":"deploytest-5fcd2",
     "public": "./",
     "ignore": [
       "firebase.json",

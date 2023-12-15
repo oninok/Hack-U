@@ -2,63 +2,51 @@
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
-
 main, #messages-card {
   height: 100%;
   padding-bottom: 0;
 }
-
 #messages-card-container {
   height: 95%;
   padding-bottom: 0;
 }
-
 #messages-card {
   margin-top: 15px;
 }
-
 .mdl-layout__header-row span {
   margin-left: 15px;
   margin-top: 17px;
 }
-
 .mdl-grid {
   max-width: 1024px;
   margin: auto;
 }
-
 .material-icons {
   font-size: 36px;
   top: 8px;
   position: relative;
 }
-
 .mdl-layout__header-row {
   padding: 0;
   margin: 0 auto;
 }
-
 #messages-box.mdl-card__supporting-text {
   width: auto;
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
 }
-
 #messages {
   overflow-y: auto;
   margin-bottom: 10px;
   height: calc(100% - 80px);
 }
-
 #message-filler {
   flex-grow: 1;
 }
-
 .message-container:first-of-type {
   border-top-width: 0;
 }
-
 .message-container {
   display: block;
   margin-top: 10px;
@@ -192,5 +180,29 @@ main, #messages-card {
 }
 .mdl-button .material-icons {
   top: -1px;
+  margin-right: 5px;
+}
+
+#message-form #clip {
+  margin-left: 10px;
+  margin-top: 13px;
+  display: flex;
+  align-items: center;
+}
+
+#message-form #clip i.material-icons {
+  font-size: 25px;
+}
+
+#clip {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 5px;
+  text-decoration: none;
+  flex-direction: row;
+}
+
+#clip i.material-icons {
   margin-right: 5px;
 }
